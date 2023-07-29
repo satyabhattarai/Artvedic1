@@ -2,10 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-.carousel .slide img{
-    width: auto !important;
+#home-carousel .alice-carousel-dot-item{
+    margin-right: 12px;
 }
 
-.carousel img {
-    width: auto !important;
+.alice-carousel-dot-item{
+    height: 80px;
+    max-width: 100px;
+    border: 2px solid #eee;
+    margin: 0px 4px 0px 0px;
+    transition: all 0.4s;
+    padding: 4px;
+}
+
+.alice-carousel-dot-item img{
+    object-fit:contain;
+    width: 100%;
+    height: 100%;
+}
+
+.alice-carousel-dot-item:hover{
+    border: 2px solid #bbb;
+    cursor: pointer;
+}
+
+.alice-carousel__dots-item.__active .alice-carousel-dot-item{
+    border: 2px solid #000;
+}
+
+.alice-carousel .alice-carousel__stage-item{
+    height: 500px;
+}
+
+#product-carousel .alice-carousel {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#product-carousel .alice-carousel > div{
+    width: 100%;
+    overflow: hidden;
+}
+
+.alice-carousel > div img {
+    max-width: 100%;
+    height: 100%;
+}
+
+#product-carousel .alice-carousel .alice-carousel__dots > li{
+    display: block;
+    padding: 8px 0;
+}
+
+#product-carousel .alice-carousel .alice-carousel__dots{
+    margin: 0px 3px 5px;
 }

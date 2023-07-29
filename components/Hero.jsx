@@ -1,26 +1,43 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+
+import "react-alice-carousel/lib/alice-carousel.css";
+import AliceCarousel from "react-alice-carousel";
+
+const handleDragStart = (e) => e.preventDefault();
+
+const items = [
+  <img
+    src="/land1.jpeg"
+    onDragStart={handleDragStart}
+    role="presentation"
+    className="mx-auto"
+  />,
+  <img
+    src="/art3.jpeg"
+    onDragStart={handleDragStart}
+    role="presentation"
+    className="mx-auto"
+  />,
+  <img
+    src="/art4.jpeg"
+    onDragStart={handleDragStart}
+    role="presentation"
+    className="mx-auto"
+  />,
+];
+
 const hero = () => {
   return (
-    <div className="mx-auto max-w-[1280px]">
-      <Carousel
-        autoPlay={true}
-        infiniteLoop={true}
-        showThumbs={false}
-        showArrows={true}
-        width={"auto"}
-      >
-        <div>
-          <img src="art2.jpeg" className="h-[400px] w-auto" />
-        </div>
-        <div>
-          <img src="art3.jpeg" className="h-[400px] w-auto" />
-        </div>
-        <div>
-          <img src="art4.jpeg" className="h-[400px] w-auto" />
-        </div>
-      </Carousel>
+    <div className="mx-auto max-w-[1280px] p-4" id="home-carousel">
+      <AliceCarousel
+        mouseTracking
+        items={items}
+        infinite
+        disableButtonsControls
+        disableDotsControls
+        autoPlay
+        autoPlayInterval={4000}
+      />
     </div>
   );
 };

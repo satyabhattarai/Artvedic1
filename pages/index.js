@@ -1,9 +1,6 @@
 import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
 import Productcard from "@/components/Productcard";
-import { Inter } from "@next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -12,8 +9,8 @@ export default function Home() {
       <Heading />
 
       <div
-        className="grid grid-cols-1 md:grid-cols-2 
-    lg:grid-cols-3 gap-5 px-5 md:px-32 my-14 "
+        className={`grid grid-cols-1 md:grid-cols-2 
+    lg:grid-cols-3 gap-5 px-5 md:px-32 my-14`}
       >
         <Productcard />
         <Productcard />

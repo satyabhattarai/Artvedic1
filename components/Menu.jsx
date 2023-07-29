@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const data = [
   { id: 1, name: "Home", url: "/" },
@@ -30,14 +31,20 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
                   setShowCatMenu(false);
                 }}
               >
-                {item.name} +
+                {item.name}{" "}
+                <span class="inline-block">
+                  <MdOutlineKeyboardArrowDown size={14} />
+                </span>
                 {showCatMenu && (
                   <ul
                     className="bg-white absolute top-6 left-0 
-                    min-w-[150px] px-1 py-1 text-black shadow-lg"a
-                  >                    {subMenudata.map((submenu) => {
+                    min-w-[150px] px-1 py-1 text-black shadow-lg"
+                    a
+                  >
+                    {" "}
+                    {subMenudata.map((submenu) => {
                       return (
-                        <Link key={submenu.id} href="/">
+                        <Link key={submenu.id} href="/category/1">
                           <li
                             className="h-12 flex justify-between items-center 
                                     px-3 hover:bg-black/[0.03] rounded-md"
