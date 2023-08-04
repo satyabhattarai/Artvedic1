@@ -24,7 +24,7 @@ const Header = () => {
 
       <div className=" flex items-center gap-4 ">
         <AiOutlineSearch className="cursor-pointer" />
-        <AiOutlineShoppingCart className=" cursor-pointer" />
+      <Link href="/cart"> <AiOutlineShoppingCart className=" cursor-pointer" /></Link> 
       </div>
     </header>
   );
